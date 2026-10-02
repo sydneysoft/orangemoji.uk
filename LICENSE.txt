@@ -1,0 +1,16 @@
+OrangeEmoji icons by OrangeSoft
+https://www.orangesoft.uk
+
+Graphics (SVG icons in icons/color and icons/line, and the catalog data)
+are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt the icons for any purpose, including commercial
+use, provided you give appropriate credit.
+
+Suggested attribution:
+Icons by OrangeEmoji — https://orangemoji.uk — the open icon project from OrangeSoft.
+
+The landing page code in this folder is released under the MIT License.
+
+Copyright (c) 2026 OrangeSoft Ltd
