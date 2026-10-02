@@ -1,0 +1,17 @@
+{
+  "name": "orangemoji",
+  "version": "1.0.0",
+  "description": "Open icons for designers, developers and everyone else. An OrangeSoft project.",
+  "license": "CC-BY-4.0",
+  "homepage": "https://orangemoji.uk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sydneysoft/orangemoji.uk.git"
+  },
+  "files": [
+    "icons",
+    "orangemoji.json",
+    "LICENSE.txt"
+  ],
+  "keywords": ["icons", "svg", "emoji", "orangemoji", "orangesoft"]
+}
