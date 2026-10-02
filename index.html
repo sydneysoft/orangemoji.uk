@@ -175,7 +175,7 @@
     <div class="stats">
       <div class="stat"><b id="count">0</b><span>Icons in v1</span></div>
       <div class="stat"><b>2</b><span>Color and line</span></div>
-      <div class="stat"><b>SVG</b><span>Production ready</span></div>
+      <div class="stat"><b>npm</b><span>orangemoji@1.0.0</span></div>
       <div class="stat"><b>CC BY</b><span>Use it, credit us</span></div>
     </div>
 
@@ -194,31 +194,35 @@
     </section>
 
     <section id="use">
-      <h2>Use it in a project</h2>
-      <p class="sub">Drop the files in, or point at a single SVG. No build step required.</p>
+      <h2>Add it to a project</h2>
+      <p class="sub">Same idea as OpenMoji. Install the package, or point at one SVG. No build step required.</p>
       <div class="use-grid">
         <div class="panel">
-          <h3>HTML</h3>
+          <h3>npm</h3>
+          <p>Published as <code>orangemoji@1.0.0</code>.</p>
+          <pre><code>npm install orangemoji</code></pre>
           <pre><code><img
-  src="icons/color/book.svg"
+  src="node_modules/orangemoji/icons/color/book.svg"
   width="32" height="32" alt="" /></code></pre>
         </div>
         <div class="panel">
-          <h3>Line icons inherit color</h3>
+          <h3>CDN</h3>
+          <p>Hotlink a file. The repo path works from any site.</p>
           <pre><code><img
-  src="icons/line/terminal.svg"
+  src="https://cdn.jsdelivr.net/gh/sydneysoft/orangemoji.uk@main/icons/color/book.svg"
+  width="32" height="32" alt="" /></code></pre>
+        </div>
+        <div class="panel">
+          <h3>Direct from this site</h3>
+          <p>Color files are painted. Line files use <code>currentColor</code>, so they follow the surrounding text color.</p>
+          <pre><code><img
+  src="https://orangemoji.uk/icons/line/terminal.svg"
   width="24" height="24" alt=""
   style="color:#E85D04" /></code></pre>
         </div>
         <div class="panel">
-          <h3>Inline, so you can style it</h3>
-          <pre><code><svg viewBox="0 0 72 72" width="28">
-  <use href="icons/line/search.svg#icon" />
-</svg></code></pre>
-        </div>
-        <div class="panel">
-          <h3>Files</h3>
-          <p><code>icons/color/*.svg</code> painted sets.<br><code>icons/line/*.svg</code> stroke-only, <code>currentColor</code>.<br><code>orangemoji.json</code> names, tags, both SVGs.</p>
+          <h3>What you get</h3>
+          <p><code>icons/color/</code> filled icons.<br><code>icons/line/</code> stroke-only icons.<br><code>orangemoji.json</code> names, tags, and both SVGs.<br>Click any icon above to copy its SVG, HTML, or npm path.</p>
         </div>
       </div>
     </section>
@@ -250,7 +254,7 @@
     <div class="code-tabs" id="tabs">
       <button class="on" data-tab="svg" type="button">SVG</button>
       <button data-tab="html" type="button">HTML</button>
-      <button data-tab="react" type="button">React</button>
+      <button data-tab="react" type="button">npm</button>
     </div>
     <pre><code id="d-code"></code></pre>
     <div class="cta-row">
@@ -310,8 +314,9 @@ function setMode(m) {
 
 function snippet(i) {
   const svg = state.mode === "color" ? i.color : i.line;
-  if (state.tab === "html") return `<img src="icons/${state.mode}/${i.name}.svg" width="32" height="32" alt="${i.name}" />`;
-  if (state.tab === "react") return `import ${i.name.replace(/-/g, "_")}Url from "./icons/${state.mode}/${i.name}.svg";\n\n<img src={${i.name.replace(/-/g, "_")}Url} width={32} height={32} alt="${i.name}" />`;
+  const file = `icons/${state.mode}/${i.name}.svg`;
+  if (state.tab === "html") return `<img src="https://orangemoji.uk/${file}" width="32" height="32" alt="${i.name}" />`;
+  if (state.tab === "react") return `npm install orangemoji\n\n<img src="node_modules/orangemoji/${file}" width={32} height={32} alt="${i.name}" />`;
   return svg;
 }
 function open(i) {

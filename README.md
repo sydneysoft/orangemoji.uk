@@ -2,19 +2,26 @@
 
 Open icons for designers, developers and everyone else. An OrangeSoft project.
 
+Site: https://orangemoji.uk
+Package: https://www.npmjs.com/package/orangemoji
+
 ## Use
 
-Color SVGs live in `icons/color/`. Line SVGs live in `icons/line/` and use `currentColor`.
-
-```html
-<img src="icons/color/book.svg" width="32" height="32" alt="" />
+```bash
+npm install orangemoji
 ```
 
 ```html
-<img src="icons/line/book.svg" width="32" height="32" alt="" style="color:#E85D04" />
+<img src="node_modules/orangemoji/icons/color/book.svg" width="32" height="32" alt="" />
 ```
 
-Catalog metadata is in `orangemoji.json`.
+CDN:
+
+```html
+<img src="https://cdn.jsdelivr.net/gh/sydneysoft/orangemoji.uk@main/icons/color/book.svg" width="32" height="32" alt="" />
+```
+
+Line icons live in `icons/line/` and use `currentColor`.
 
 ## License
 
